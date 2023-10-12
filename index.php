@@ -3,7 +3,7 @@
 use Unialfa\OrderProcessor;
 use Unialfa\RedisQueue;
 
-require_once 'vender/autoload.php';
+require 'vendor/autoload.php';
 
 $queue = new RedisQueue();
 

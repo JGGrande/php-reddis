@@ -20,4 +20,13 @@ class RedisQueue {
     public function toQueue($queueName, $item){
         $this->redis->rpush($queueName, $item);
     }
+    public function consumerQueue($queueName){
+        return $this->redis->lpop($queueName);
+    }
+    public function getQueueLenght($queueName){
+        return $this->redis->llen($queueName);
+    }
+    public function getRedisInstance(){
+        return $this->redis;
+    }
 }
